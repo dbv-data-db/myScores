@@ -102,10 +102,10 @@ col = st.columns((1.5, 4.5, 2), gap='medium')
 
 with col[0]:
     st.markdown('#### Percentages')
-    states_migration_greater = 60
-    states_migration_less = 40
-    donut_chart_greater = make_donut(states_migration_greater, 'Inbound Migration', 'green')
-    donut_chart_less = make_donut(states_migration_less, 'Outbound Migration', 'red')
+    feature_complete = 60
+    ease_implementation = 40
+    donut_chart_greater = make_donut(feature_complete, 'Feature Complete', 'blue')
+    donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')
     st.write('Inbound')
     st.altair_chart(donut_chart_greater)
     st.write('Outbound')

@@ -108,7 +108,7 @@ st.write("this is longer text that is supposed to just go across everything.")
 
 col = st.columns((3, 3, 2), gap='medium')
 with col[0]:
-    st.markdown('Adobe')
+    st.markdown('#### Adobe')
     indexCount = 0
     for index, row in scoredata.iterrows():
         if row['adobeScore']==4:
@@ -120,9 +120,11 @@ with col[0]:
     donut_chart_greater = make_donut(feature_complete, 'Feature Complete', 'blue')
     donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')
     st.write('Feature Completeness')
-    st.altair_chart(donut_chart_greater)    
+    st.altair_chart(donut_chart_greater) 
+    st.markdown('#### Adobe Average')
+    st.write(scoredata['adobeScore'].mean())    
 with col[1]:
-    st.markdown('Salesforce')
+    st.markdown('#### Salesforce')
     indexCount = 0
     for index, row in scoredata.iterrows():
         if row['salesforceScore']==4:
@@ -135,8 +137,10 @@ with col[1]:
     donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')
     st.write('Feature Complete')
     st.altair_chart(donut_chart_greater)    
+    st.markdown('#### Salesforce Average')
+    st.write(scoredata['salesforceScore'].mean())    
 with col[2]:
-    st.markdown('Braze')
+    st.markdown('#### Braze')
     indexCount = 0
     for index, row in scoredata.iterrows():
         if row['brazeScore']==4:
@@ -149,27 +153,20 @@ with col[2]:
     donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')
     st.write('Feature Complete')
     st.altair_chart(donut_chart_greater)
+    st.markdown('#### Braze Average')
+    st.write(scoredata['brazeScore'].mean())        
     
 col = st.columns((1.5, 4.5, 2), gap='medium')
 
 with col[0]:
-    st.markdown('#### Adobe')
-    st.markdown('#### Salesforce')
-    st.markdown('#### Braze')
+    st.markdown('#### Something here')
 
 with col[1]:
     st.markdown('#### Feature Scoring')
     heatmap = make_heatmap(df_reshaped, 'subCategory', 'adobeScore', 'priority', selected_color_theme)
     st.altair_chart(heatmap, use_container_width=True)
-    
-
 
 with col[2]:
-    st.markdown('#### PX Heatmap')
-    st.markdown('#### Adobe Average')
-    st.write(scoredata['adobeScore'].mean())
-    st.markdown('#### Salesforce Average')
-    st.write(scoredata['salesforceScore'].mean())
-    st.markdown('#### Braze Average')
-    st.write(scoredata['brazeScore'].mean())    
+    st.markdown('#### Something here')
+
     

@@ -9,7 +9,7 @@ import math
 #######################
 # Page configuration
 st.set_page_config(
-    page_title="Scorecared Dashboard",
+    page_title="Scorecard Dashboard",
     page_icon="🏂",
     layout="wide",
     initial_sidebar_state="expanded")
@@ -26,7 +26,7 @@ scoredata = pd.read_csv('data/scores.csv')
 #######################
 # Sidebar
 with st.sidebar:
-    st.title('Selection Scorescard')
+    st.title('Selection Scorecard')
     cat_list = list(df_reshaped.category.unique())[::-1]
     
     selected_category = st.selectbox('Select a Category', cat_list)

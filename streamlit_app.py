@@ -19,6 +19,7 @@ alt.themes.enable("dark")
 #######################
 # Load data
 df_reshaped = pd.read_csv('data/scores.csv')
+scoredata = pd.read_csv('data/scores.csv')
 
 
 #######################
@@ -102,7 +103,7 @@ col = st.columns((1.5, 4.5, 2), gap='medium')
 
 with col[0]:
     st.markdown('#### Adobe')
-    feature_complete = df_reshaped['adobeScore'].mean()
+    feature_complete = scoredata['adobeScore'].mean()
     ease_implementation = 40
     donut_chart_greater = make_donut(feature_complete, 'Feature Complete', 'blue')
     donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')
@@ -112,7 +113,7 @@ with col[0]:
     st.altair_chart(donut_chart_less)
 
     st.markdown('#### Salesforce')
-    feature_complete = df_reshaped['salesforceScore'].mean()
+    feature_complete = scoredata['salesforceScore'].mean()
     ease_implementation = 40
     donut_chart_greater = make_donut(feature_complete, 'Feature Complete', 'blue')
     donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')
@@ -122,7 +123,7 @@ with col[0]:
     st.altair_chart(donut_chart_less)
 
     st.markdown('#### Braze')
-    feature_complete = df_reshaped['brazeScore'].mean()
+    feature_complete = scoredata['brazeScore'].mean()
     ease_implementation = 40
     donut_chart_greater = make_donut(feature_complete, 'Feature Complete', 'blue')
     donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')

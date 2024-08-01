@@ -69,9 +69,17 @@ with col[1]:
     st.altair_chart(heatmap, use_container_width=True)
     
 
-with col[2]:
-    st.markdown('#### Top States')
 
+with col[2]:
+    st.markdown('#### PX Heatmap')
+    data=[[1, 25, 30, 50, 1], [20, 1, 60, 80, 30], [30, 60, 1, 5, 20]]
+    fig = px.imshow(data,
+                    labels=dict(x="Day of Week", y="Time of Day", color="Productivity"),
+                    x=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+                    y=['Morning', 'Afternoon', 'Evening']
+                   )
+    fig.update_xaxes(side="top")
+    fig.show()
     
     with st.expander('About', expanded=True):
         st.write('''

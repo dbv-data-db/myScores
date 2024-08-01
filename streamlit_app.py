@@ -52,6 +52,49 @@ def make_heatmap(input_df, input_y, input_x, input_color, input_color_theme):
         ) 
     # height=300
     return heatmap
+    
+# Donut chart
+def make_donut(input_response, input_text, input_color):
+  if input_color == 'blue':
+      chart_color = ['#29b5e8', '#155F7A']
+  if input_color == 'green':
+      chart_color = ['#27AE60', '#12783D']
+  if input_color == 'orange':
+      chart_color = ['#F39C12', '#875A12']
+  if input_color == 'red':
+      chart_color = ['#E74C3C', '#781F16']
+    
+  source = pd.DataFrame({
+      "Topic": ['', input_text],
+      "% value": [100-input_response, input_response]
+  })
+  source_bg = pd.DataFrame({
+      "Topic": ['', input_text],
+      "% value": [100, 0]
+  })
+    
+  plot = alt.Chart(source).mark_arc(innerRadius=45, cornerRadius=25).encode(
+      theta="% value",
+      color= alt.Color("Topic:N",
+                      scale=alt.Scale(
+                          #domain=['A', 'B'],
+                          domain=[input_text, ''],
+                          # range=['#29b5e8', '#155F7A']),  # 31333F
+                          range=chart_color),
+                      legend=None),
+  ).properties(width=130, height=130)
+    
+  text = plot.mark_text(align='center', color="#29b5e8", font="Lato", fontSize=32, fontWeight=700, fontStyle="italic").encode(text=alt.value(f'{input_response} %'))
+  plot_bg = alt.Chart(source_bg).mark_arc(innerRadius=45, cornerRadius=20).encode(
+      theta="% value",
+      color= alt.Color("Topic:N",
+                      scale=alt.Scale(
+                          # domain=['A', 'B'],
+                          domain=[input_text, ''],
+                          range=chart_color),  # 31333F
+                      legend=None),
+  ).properties(width=130, height=130)
+  return plot_bg + plot + text
 
 #######################
 # Dashboard Main Panel
@@ -61,6 +104,14 @@ with col[0]:
     st.markdown('#### Gains/Losses')
 
     st.markdown('#### States Migration')
+    states_migration_greater = 0
+    states_migration_less = 0
+    donut_chart_greater = make_donut(states_migration_greater, 'Inbound Migration', 'green')
+    donut_chart_less = make_donut(states_migration_less, 'Outbound Migration', 'red')
+    st.write('Inbound')
+    st.altair_chart(donut_chart_greater)
+    st.write('Outbound')
+    st.altair_chart(donut_chart_less)
 
 
 with col[1]:
@@ -72,13 +123,7 @@ with col[1]:
 
 with col[2]:
     st.markdown('#### PX Heatmap')
-    data=[[1, 25, 30, 50, 1], [20, 1, 60, 80, 30], [30, 60, 1, 5, 20]]
-    fig = px.imshow(data,
-                    labels=dict(x="Day of Week", y="Time of Day", color="Productivity"),
-                    x=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
-                    y=['Morning', 'Afternoon', 'Evening']
-                   )
-    st.altair_chart(fig, use_container_width=True)
+
     
     with st.expander('About', expanded=True):
         st.write('''

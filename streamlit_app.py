@@ -65,7 +65,7 @@ with col[0]:
 
 with col[1]:
     st.markdown('#### Total Population')
-    heatmap = make_heatmap(df_reshaped, 'priority', 'subcategory', 'adobescore', selected_color_theme)
+    heatmap = make_heatmap(df_reshaped, 'subCategory', 'adobescore', 'adobescore', selected_color_theme)
     st.altair_chart(heatmap, use_container_width=True)
     
 

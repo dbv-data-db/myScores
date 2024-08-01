@@ -101,14 +101,14 @@ def make_donut(input_response, input_text, input_color):
 col = st.columns((1.5, 4.5, 2), gap='medium')
 
 with col[0]:
-    st.markdown('#### Percentages')
+    st.markdown('#### Percents')
     feature_complete = 60
     ease_implementation = 40
     donut_chart_greater = make_donut(feature_complete, 'Feature Complete', 'blue')
     donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')
-    st.write('Inbound')
+    st.write('Feature Complete')
     st.altair_chart(donut_chart_greater)
-    st.write('Outbound')
+    st.write('Ease of Implementation')
     st.altair_chart(donut_chart_less)
 
 

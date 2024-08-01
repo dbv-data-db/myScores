@@ -103,6 +103,17 @@ def make_donut(input_response, input_text, input_color):
 
 #######################
 # Dashboard Main Panel
+st.title('Can I make a row across the top?')
+st.write("this is longer text that is supposed to just go across everything.")
+
+col = st.columes((3, 3, 2), gap='medium')
+with col[0]:
+    st.markdown('Adobe')
+with col[1]:
+    st.markdown('Salesforce')
+with col[2]:
+    st.markdown('Braze')
+
 col = st.columns((1.5, 4.5, 2), gap='medium')
 
 with col[0]:

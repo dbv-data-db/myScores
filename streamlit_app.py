@@ -120,7 +120,13 @@ with col[0]:
     st.altair_chart(donut_chart_less)
 
     st.markdown('#### Salesforce')
-    feature_complete = scoredata['salesforceScore'].sum()
+    indexCount = 0
+    for index, row in scoredata.iterrows():
+        if row['salesforceScore']==4:
+            indexCount = indexCount + 1
+        if row['salesforceScore']==5:
+            indexCount = indexCount + 1
+    feature_complete = math.trunc(indexCount/scoredata['salesforceScore'].count()*100)    
     ease_implementation = 40
     donut_chart_greater = make_donut(feature_complete, 'Feature Complete', 'blue')
     donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')
@@ -130,7 +136,13 @@ with col[0]:
     st.altair_chart(donut_chart_less)
 
     st.markdown('#### Braze')
-    feature_complete = scoredata['brazeScore'].count()
+    indexCount = 0
+    for index, row in scoredata.iterrows():
+        if row['brazeScore']==4:
+            indexCount = indexCount + 1
+        if row['brazeScore']==5:
+            indexCount = indexCount + 1
+    feature_complete = math.trunc(indexCount/scoredata['brazeScore'].count()*100)
     ease_implementation = 40
     donut_chart_greater = make_donut(feature_complete, 'Feature Complete', 'blue')
     donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')

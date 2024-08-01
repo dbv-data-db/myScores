@@ -103,7 +103,7 @@ col = st.columns((1.5, 4.5, 2), gap='medium')
 
 with col[0]:
     st.markdown('#### Adobe')
-    feature_complete = scoredata['adobeScore'].mean()
+    feature_complete = scoredata['adobeScore'].count()
     ease_implementation = 40
     donut_chart_greater = make_donut(feature_complete, 'Feature Complete', 'blue')
     donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')
@@ -113,7 +113,7 @@ with col[0]:
     st.altair_chart(donut_chart_less)
 
     st.markdown('#### Salesforce')
-    feature_complete = scoredata['salesforceScore'].mean()
+    feature_complete = scoredata['salesforceScore'].count()
     ease_implementation = 40
     donut_chart_greater = make_donut(feature_complete, 'Feature Complete', 'blue')
     donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')
@@ -123,7 +123,7 @@ with col[0]:
     st.altair_chart(donut_chart_less)
 
     st.markdown('#### Braze')
-    feature_complete = scoredata['brazeScore'].mean()
+    feature_complete = scoredata['brazeScore'].count()
     ease_implementation = 40
     donut_chart_greater = make_donut(feature_complete, 'Feature Complete', 'blue')
     donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')
@@ -143,7 +143,12 @@ with col[1]:
 
 with col[2]:
     st.markdown('#### PX Heatmap')
-
+    st.markdown('#### Adobe Average')
+    st.write(scoredata['adobeScore'].mean())
+    st.markdown('#### Salesforce Average')
+    st.write(scoredata['salesforceScore'].mean())
+    st.markdown('#### Braze Average')
+    st.write(scoredata['brazeScore'].mean())    
     
     with st.expander('About', expanded=True):
         st.write('''

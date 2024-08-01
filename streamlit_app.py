@@ -103,7 +103,14 @@ col = st.columns((1.5, 4.5, 2), gap='medium')
 
 with col[0]:
     st.markdown('#### Adobe')
-    feature_complete = (scoredata['adobeScore'].sum())/(scoredata['adobeScore'].count())
+    indexCount = 0
+    for index, row in scoredata.iterrows():
+        if row['adobeScore']==4:
+            indexCount = indexCount + 1
+        if row['adobeScore']==5:
+            indexCount = indexCount + 1
+    feature_complete = (indexCount/scoredata['adobeScore'].count() * 100)
+    #feature_complete = 63
     ease_implementation = 40
     donut_chart_greater = make_donut(feature_complete, 'Feature Complete', 'blue')
     donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')

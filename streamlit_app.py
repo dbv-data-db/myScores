@@ -155,7 +155,7 @@ with col[0]:
 
 with col[1]:
     st.markdown('#### Feature Scoring')
-    heatmap = make_heatmap(df_reshaped, 'subCategory', 'adobescore', 'priority', selected_color_theme)
+    heatmap = make_heatmap(df_reshaped, 'subCategory', 'adobeScore', 'priority', selected_color_theme)
     st.altair_chart(heatmap, use_container_width=True)
     
 
@@ -171,7 +171,5 @@ with col[2]:
     
     with st.expander('About', expanded=True):
         st.write('''
-            - Data: [U.S. Census Bureau](https://www.census.gov/data/datasets/time-series/demo/popest/2010s-state-total.html).
-            - :orange[**Gains/Losses**]: states with high inbound/ outbound migration for selected year
-            - :orange[**States Migration**]: percentage of states with annual inbound/ outbound migration > 50,000
+            - Data: Analysis completed by Virtusa.
             ''')

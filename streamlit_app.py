@@ -101,11 +101,9 @@ def make_donut(input_response, input_text, input_color):
 col = st.columns((1.5, 4.5, 2), gap='medium')
 
 with col[0]:
-    st.markdown('#### Gains/Losses')
-
-    st.markdown('#### States Migration')
-    states_migration_greater = 0
-    states_migration_less = 0
+    st.markdown('#### Percentages')
+    states_migration_greater = 60
+    states_migration_less = 40
     donut_chart_greater = make_donut(states_migration_greater, 'Inbound Migration', 'green')
     donut_chart_less = make_donut(states_migration_less, 'Outbound Migration', 'red')
     st.write('Inbound')

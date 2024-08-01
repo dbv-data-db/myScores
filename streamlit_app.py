@@ -25,7 +25,14 @@ df_reshaped = pd.read_csv('data/scores.csv')
 # Sidebar
 with st.sidebar:
     st.title('Selection Scorescard')
+    cat_list = list(df_reshaped.category.unique())[::-1]
+    
+    selected_category = st.selectbox('Select a Category', cat_list)
+    df_selected_category = df_reshaped[df_reshaped.category == selected_category]
+    df_selected_category_sorted = df_selected_category.sort_values(by="priority", ascending=False)
 
+    color_theme_list = ['blues', 'cividis', 'greens', 'inferno', 'magma', 'plasma', 'reds', 'rainbow', 'turbo', 'viridis']
+    selected_color_theme = st.selectbox('Select a color theme', color_theme_list)
 #######################
 # Plots
 

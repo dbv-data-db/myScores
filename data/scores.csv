@@ -1,4 +1,4 @@
-Priority,Category,Sub-Category,Description,Adobe Score,Salesforce Score,Braze Score,
+priority,category,subCategory,description,adobescore,salesforcescore,brazescore,
 1,Data,Interoperability,,5,4,3,
 1,Data,Transformations,,5,4,3,
 1,Data,Encryption,,5,4,3,

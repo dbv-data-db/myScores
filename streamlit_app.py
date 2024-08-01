@@ -58,7 +58,7 @@ def make_heatmap(input_df, input_y, input_x, input_color, input_color_theme):
     # height=300
     return heatmap
 # Piechart
-def make_pieChart():
+def make_pieChart(df, input_color_theme):
     pie = px.pie(df, values='priority', names='category', title='Feature Priorization')
     return pie
 
@@ -186,9 +186,9 @@ with col[1]:
     st.markdown('#### Feature Scoring')
     heatmap = make_heatmap(df_reshaped, 'subCategory', 'adobeScore', 'priority', selected_color_theme)
     st.altair_chart(heatmap, use_container_width=True)
-    piechart = make_pie(df_selected_category, 'priority', 'adobeScore', selected_color_theme)
+    piechart = make_pie(scoredata, selected_color_theme)
     st.plotly_chart(pie, use_container_width=True)
-
+#df_selected_category is used for filtering
 with col[2]:
     st.markdown('#### Something here')
 

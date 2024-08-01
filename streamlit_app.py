@@ -78,8 +78,7 @@ with col[2]:
                     x=['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
                     y=['Morning', 'Afternoon', 'Evening']
                    )
-    fig.update_xaxes(side="top")
-    fig.show()
+    st.altair_chart(fig, use_container_width=True)
     
     with st.expander('About', expanded=True):
         st.write('''

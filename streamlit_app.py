@@ -34,7 +34,7 @@ with st.sidebar:
     df_selected_category_sorted = df_selected_category.sort_values(by="priority", ascending=False)
     color_theme_list = ['blues', 'cividis', 'greens', 'inferno', 'magma', 'plasma', 'reds', 'rainbow', 'turbo', 'viridis']
     selected_color_theme = st.selectbox('Select a color theme', color_theme_list)
-with st.expander('About', expanded=True):
+    st.title('About')
     st.write('''
         - Data: Analysis completed by Virtusa.
         ''')

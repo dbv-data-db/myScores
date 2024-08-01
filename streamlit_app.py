@@ -109,7 +109,6 @@ with col[0]:
             indexCount = indexCount + 1
         if row['adobeScore']==5:
             indexCount = indexCount + 1
-            str(round(answer, 2))
     feature_complete = (indexCount/scoredata['adobeScore'].count()*100)
     feature_complete = str(round(feature_complete, 2))
     ease_implementation = indexCount

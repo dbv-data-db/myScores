@@ -186,8 +186,8 @@ with col[1]:
     st.markdown('#### Feature Scoring')
     heatmap = make_heatmap(df_reshaped, 'subCategory', 'adobeScore', 'priority', selected_color_theme)
     st.altair_chart(heatmap, use_container_width=True)
-    piechart = make_pie(scoredata, selected_color_theme)
-    st.plotly_chart(pie, use_container_width=True)
+    #piechart = make_pie(scoredata, selected_color_theme)
+    #st.altair_chart(pie, use_container_width=True)
 #df_selected_category is used for filtering
 with col[2]:
     st.markdown('#### Something here')

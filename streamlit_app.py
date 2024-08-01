@@ -57,6 +57,11 @@ def make_heatmap(input_df, input_y, input_x, input_color, input_color_theme):
         ) 
     # height=300
     return heatmap
+# Piechart
+def make_pieChart():
+    pie = px.pie(df, values='pop', names='country', title='Population of European continent')
+    return pie
+
 # Choropleth map
 def make_choropleth(input_df, input_id, input_column, input_color_theme):
     choropleth = px.choropleth(input_df, locations=input_id, color=input_column, locationmode="USA-states",
@@ -181,8 +186,8 @@ with col[1]:
     st.markdown('#### Feature Scoring')
     heatmap = make_heatmap(df_reshaped, 'subCategory', 'adobeScore', 'priority', selected_color_theme)
     st.altair_chart(heatmap, use_container_width=True)
-    choropleth = make_choropleth(df_selected_category, 'priority', 'adobeScore', selected_color_theme)
-    st.plotly_chart(choropleth, use_container_width=True)
+    piechart = make_pie(df_selected_category, 'priority', 'adobeScore', selected_color_theme)
+    st.plotly_chart(pie, use_container_width=True)
 
 with col[2]:
     st.markdown('#### Something here')

@@ -109,15 +109,6 @@ st.write("this is longer text that is supposed to just go across everything.")
 col = st.columns((3, 3, 2), gap='medium')
 with col[0]:
     st.markdown('Adobe')
-with col[1]:
-    st.markdown('Salesforce')
-with col[2]:
-    st.markdown('Braze')
-
-col = st.columns((1.5, 4.5, 2), gap='medium')
-
-with col[0]:
-    st.markdown('#### Adobe')
     indexCount = 0
     for index, row in scoredata.iterrows():
         if row['adobeScore']==4:
@@ -128,12 +119,10 @@ with col[0]:
     ease_implementation = indexCount
     donut_chart_greater = make_donut(feature_complete, 'Feature Complete', 'blue')
     donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')
-    st.write('Feature Complete')
-    st.altair_chart(donut_chart_greater)
-    st.write('Ease of Implementation')
-    st.altair_chart(donut_chart_less)
-
-    st.markdown('#### Salesforce')
+    st.write('Feature Completeness')
+    st.altair_chart(donut_chart_greater)    
+with col[1]:
+    st.markdown('Salesforce')
     indexCount = 0
     for index, row in scoredata.iterrows():
         if row['salesforceScore']==4:
@@ -145,11 +134,9 @@ with col[0]:
     donut_chart_greater = make_donut(feature_complete, 'Feature Complete', 'blue')
     donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')
     st.write('Feature Complete')
-    st.altair_chart(donut_chart_greater)
-    st.write('Ease of Implementation')
-    st.altair_chart(donut_chart_less)
-
-    st.markdown('#### Braze')
+    st.altair_chart(donut_chart_greater)    
+with col[2]:
+    st.markdown('Braze')
     indexCount = 0
     for index, row in scoredata.iterrows():
         if row['brazeScore']==4:
@@ -162,10 +149,13 @@ with col[0]:
     donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')
     st.write('Feature Complete')
     st.altair_chart(donut_chart_greater)
-    st.write('Ease of Implementation')
-    st.altair_chart(donut_chart_less)
+    
+col = st.columns((1.5, 4.5, 2), gap='medium')
 
-
+with col[0]:
+    st.markdown('#### Adobe')
+    st.markdown('#### Salesforce')
+    st.markdown('#### Braze')
 
 with col[1]:
     st.markdown('#### Feature Scoring')

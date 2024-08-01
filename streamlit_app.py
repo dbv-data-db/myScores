@@ -36,7 +36,7 @@ with st.sidebar:
     selected_color_theme = st.selectbox('Select a color theme', color_theme_list)
     st.title('About')
     st.write('''
-        Data: Analysis completed by Virtusa.
+        Data Analysis completed by Virtusa.
         ''')
 #######################
 # Plots

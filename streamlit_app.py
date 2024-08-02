@@ -163,13 +163,10 @@ with col[2]:
     
 col = st.columns((.5, 6.5, 1), gap='medium')
 
-with col[0]:
-
 with col[1]:
     st.markdown('#### Feature Scoring')
     heatmap = make_heatmap(df_reshaped, 'subCategory', 'adobeScore', 'priority', selected_color_theme)
     st.altair_chart(heatmap, use_container_width=True)
 #df_selected_category is used for filtering
-with col[2]:
 
     

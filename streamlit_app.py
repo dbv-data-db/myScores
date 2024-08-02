@@ -59,7 +59,7 @@ def make_heatmap(input_df, input_y, input_x, input_color, input_color_theme):
     # height=300
     return heatmap
 # Piechart
-def make_pieChart(input_color_theme):
+def make_pie(input_color_theme):
     pie = px.pie(weightdata, values='weight', names='category', title='Feature Prioritization')
     return pie
 

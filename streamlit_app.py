@@ -171,8 +171,11 @@ with col[1]:
     heatmap = make_heatmap(df_reshaped, 'subCategory', 'adobeScore', 'priority', selected_color_theme)
     st.altair_chart(heatmap, use_container_width=True)
     #piechart = make_pie(selected_color_theme)
-    st.dataframe(weightdata)    
-    fig = px.pie(weightdata, values='weight', names='catgory',
+    st.dataframe(weightdata)   
+    df = px.data.gapminder().query("year == 2007").query("continent == 'Europe'")
+    df.loc[df['pop'] < 2.e6, 'country'] = 'Other countries' # Represent only large countries    
+    fig = px.pie(df, values='pop', names='country', title='Population of European continent')
+    #fig = px.pie(weightdata, values='weight', names='catgory',
                  title=f'Feature Priotization',
                  height=300, width=200)
     st.plotly_chart(fig, use_container_width=True)

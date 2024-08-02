@@ -143,7 +143,7 @@ with col[1]:
     st.write('Feature Complete')
     st.altair_chart(donut_chart_greater)    
     st.markdown('#### Salesforce Average')
-    st.write(scoredata['salesforceScore'].mean())    
+    st.write(df_selected_category['salesforceScore'].mean())    
 with col[2]:
     st.markdown('#### Braze')
     indexCount = 0
@@ -165,7 +165,7 @@ col = st.columns((.5, 6.5, 1), gap='medium')
 
 with col[1]:
     st.markdown('#### Feature Scoring')
-    heatmap = make_heatmap(df_reshaped, 'subCategory', 'adobeScore', 'priority', selected_color_theme)
+    heatmap = make_heatmap(df_selected_category, 'subCategory', 'adobeScore', 'priority', selected_color_theme)
     st.altair_chart(heatmap, use_container_width=True)
     st.write(df_selected_category)
 #df_selected_category is used for filtering

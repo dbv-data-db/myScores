@@ -21,7 +21,7 @@ alt.themes.enable("dark")
 # Load data
 df_reshaped = pd.read_csv('data/scores.csv')
 scoredata = pd.read_csv('data/scores.csv')
-weightdata = pd.read_csv('data/weight.csv')
+#weightdata = pd.read_csv('data/weight.csv')
 
 
 #######################
@@ -62,23 +62,6 @@ def make_heatmap(input_df, input_y, input_x, input_color, input_color_theme):
 def make_pie(input_color_theme):
     pie = px.pie(scoredata, values='priority', names='category', title='Feature Prioritization')
     return pie
-
-# Choropleth map
-def make_choropleth(input_df, input_id, input_column, input_color_theme):
-    choropleth = px.choropleth(input_df, locations=input_id, color=input_column, locationmode="USA-states",
-                               color_continuous_scale=input_color_theme,
-                               range_color=(0, max(df_selected_year.population)),
-                               scope="usa",
-                               labels={'population':'Population'}
-                              )
-    choropleth.update_layout(
-        template='plotly_dark',
-        plot_bgcolor='rgba(0, 0, 0, 0)',
-        paper_bgcolor='rgba(0, 0, 0, 0)',
-        margin=dict(l=0, r=0, t=0, b=0),
-        height=350
-    )
-    return choropleth
 
 # Donut chart
 def make_donut(input_response, input_text, input_color):

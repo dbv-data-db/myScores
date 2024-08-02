@@ -172,11 +172,11 @@ with col[1]:
     st.altair_chart(heatmap, use_container_width=True)
     #piechart = make_pie(selected_color_theme)
     st.dataframe(weightdata)   
-    df = px.data.gapminder().query("year == 2007").query("continent == 'Europe'")
-    df.loc[df['pop'] < 2.e6, 'country'] = 'Other countries' # Represent only large countries    
-    fig = px.pie(df, values='pop', names='country', title='Population of European continent')
-    #fig = px.pie(weightdata, values='weight', names='catgory', title=f'Feature Priotization', height=300, width=200)
-    st.dataframe(df)
+    #df = px.data.gapminder().query("year == 2007").query("continent == 'Europe'")
+    #df.loc[df['pop'] < 2.e6, 'country'] = 'Other countries' # Represent only large countries    
+    #fig = px.pie(df, values='pop', names='country', title='Population of European continent')
+    fig = px.pie(weightdata, values='weight', names='category', title=f'Feature Priotization', height=300, width=200)
+    #st.dataframe(df)
     st.plotly_chart(fig, use_container_width=True)
     #st.altair_chart(piechart, use_container_width=True)
 #df_selected_category is used for filtering

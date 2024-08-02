@@ -60,7 +60,7 @@ def make_heatmap(input_df, input_y, input_x, input_color, input_color_theme):
     return heatmap
 # Piechart
 def make_pie(input_color_theme):
-    pie = px.pie(weightdata, values='weight', names='category', title='Feature Prioritization')
+    pie = px.pie(scoredata, values='priority', names='category', title='Feature Prioritization')
     return pie
 
 # Choropleth map

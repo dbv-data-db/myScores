@@ -167,7 +167,5 @@ with col[1]:
     st.markdown('#### Feature Scoring')
     heatmap = make_heatmap(df_selected_category, 'subCategory', 'adobeScore', 'priority', selected_color_theme)
     st.altair_chart(heatmap, use_container_width=True)
-    st.write(df_selected_category)
-#df_selected_category is used for filtering
 
     

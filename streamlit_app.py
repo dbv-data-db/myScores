@@ -21,7 +21,7 @@ alt.themes.enable("dark")
 # Load data
 df_reshaped = pd.read_csv('data/scores.csv')
 scoredata = pd.read_csv('data/scores.csv')
-#weightdata = pd.read_csv('data/weight.csv')
+weightdata = pd.read_csv('data/weight.csv')
 
 
 #######################
@@ -171,7 +171,12 @@ with col[1]:
     heatmap = make_heatmap(df_reshaped, 'subCategory', 'adobeScore', 'priority', selected_color_theme)
     st.altair_chart(heatmap, use_container_width=True)
     piechart = make_pie(selected_color_theme)
-    st.altair_chart(piechart, use_container_width=True)
+    fig = px.pie(weightdata, values='weight', names='catgory',
+                 title=f'Feature Priotization',
+                 height=300, width=200)
+    st.plotly_chart(fig, use_container_width=True)
+    
+    #st.altair_chart(piechart, use_container_width=True)
 #df_selected_category is used for filtering
 with col[2]:
     st.markdown('#### Something here')

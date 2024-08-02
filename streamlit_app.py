@@ -170,7 +170,8 @@ with col[1]:
     st.markdown('#### Feature Scoring')
     heatmap = make_heatmap(df_reshaped, 'subCategory', 'adobeScore', 'priority', selected_color_theme)
     st.altair_chart(heatmap, use_container_width=True)
-    piechart = make_pie(selected_color_theme)
+    #piechart = make_pie(selected_color_theme)
+    st.dataframe(weightdata)    
     fig = px.pie(weightdata, values='weight', names='catgory',
                  title=f'Feature Priotization',
                  height=300, width=200)

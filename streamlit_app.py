@@ -108,9 +108,9 @@ def make_donut(input_response, input_text, input_color):
 
 #######################
 # Dashboard Main Panel
-st.title('Can I make a row across the top?')
-st.write("this is longer text that is supposed to just go across everything.")
-
+st.title('Analysis of Multi-Channel Marketing Hub Capabilities')
+fig = px.pie(weightdata, values='weight', names='category', title=f'Feature Priotization', height=600, width=400)
+st.plotly_chart(fig, use_container_width=True)
 col = st.columns((3, 3, 2), gap='medium')
 with col[0]:
     st.markdown('#### Adobe')
@@ -170,15 +170,6 @@ with col[1]:
     st.markdown('#### Feature Scoring')
     heatmap = make_heatmap(df_reshaped, 'subCategory', 'adobeScore', 'priority', selected_color_theme)
     st.altair_chart(heatmap, use_container_width=True)
-    #piechart = make_pie(selected_color_theme)
-    st.dataframe(weightdata)   
-    #df = px.data.gapminder().query("year == 2007").query("continent == 'Europe'")
-    #df.loc[df['pop'] < 2.e6, 'country'] = 'Other countries' # Represent only large countries    
-    #fig = px.pie(df, values='pop', names='country', title='Population of European continent')
-    fig = px.pie(weightdata, values='weight', names='category', title=f'Feature Priotization', height=300, width=200)
-    #st.dataframe(df)
-    st.plotly_chart(fig, use_container_width=True)
-    #st.altair_chart(piechart, use_container_width=True)
 #df_selected_category is used for filtering
 with col[2]:
     st.markdown('#### Something here')

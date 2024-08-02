@@ -161,10 +161,9 @@ with col[2]:
     st.markdown('#### Braze Average')
     st.write(scoredata['brazeScore'].mean())        
     
-col = st.columns((1.5, 4.5, 2), gap='medium')
+col = st.columns((.5, 6.5, 1), gap='medium')
 
 with col[0]:
-    st.markdown('#### Something here')
 
 with col[1]:
     st.markdown('#### Feature Scoring')
@@ -172,6 +171,5 @@ with col[1]:
     st.altair_chart(heatmap, use_container_width=True)
 #df_selected_category is used for filtering
 with col[2]:
-    st.markdown('#### Something here')
 
     

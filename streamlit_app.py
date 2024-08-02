@@ -109,7 +109,7 @@ def make_donut(input_response, input_text, input_color):
 #######################
 # Dashboard Main Panel
 st.title('Analysis of Multi-Channel Marketing Hub Capabilities')
-fig = px.pie(weightdata, values='weight', names='category', title=f'Feature Priotization', height=600, width=400)
+fig = px.pie(weightdata, values='weight', names='category', title=f'Feature Priotization', height=500, width=300)
 st.plotly_chart(fig, use_container_width=True)
 col = st.columns((3, 3, 2), gap='medium')
 with col[0]:

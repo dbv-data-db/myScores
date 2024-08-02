@@ -20,14 +20,14 @@ priority,category,subCategory,description,adobeScore,salesforceScore,brazeScore
 1,Measurement,Data Latency,,4,4,4
 1,Content,Interoperability,,5,4,4
 1,Content,Asset Component Library,,5,4,2
-1,Content,React Support,,1,4,1
+1,Content,React Support,,3,4,1
 1,Content,Offer Experiences with Digital Assets Management,,5,4,3
 1,Content,Content Approval Workflow,,5,4,3
 1,Content,Omni-Channel Variants and Approvals,,5,4,4
 1,Content,Content Syndication (re-use),,5,4,2
 1,Content,Landing Site Personalization Control,,5,4,2
 1,Content,GenAI Content Creation,,4,4,4
-1,Content,GenAI LLM Extension,,1,4,3
+1,Content,GenAI LLM Extension,,2,4,3
 1,Marketer Experience,Interoperability,,5,4,4
 1,Marketer Experience,Campaign Management,,5,4,3
 1,Marketer Experience,Resource Management,,5,4,3

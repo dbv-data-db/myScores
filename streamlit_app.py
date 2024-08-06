@@ -22,7 +22,11 @@ alt.themes.enable("dark")
 df_reshaped = pd.read_csv('data/scores.csv')
 scoredata = pd.read_csv('data/scores.csv')
 weightdata = pd.read_csv('data/weight.csv')
-
+hots = [[.1, .3, .5, .7, .9],
+     [1, .8, .6, .4, .2],
+     [.2, 0, .5, .7, .9],
+     [.9, .8, .4, .2, 0],
+     [.3, .4, .5, .7, 1]]
 
 #######################
 # Sidebar
@@ -62,16 +66,6 @@ def make_heatmap(input_df, input_y, input_x, input_color, input_color_theme):
 def make_pie(input_color_theme):
     pie = px.pie(scoredata, values='priority', names='category', title='Feature Prioritization')
     return pie
-
-# second heatmap
-def make_h2(input_color_theme):
-    z = [[.1, .3, .5, .7, .9],
-     [1, .8, .6, .4, .2],
-     [.2, 0, .5, .7, .9],
-     [.9, .8, .4, .2, 0],
-     [.3, .4, .5, .7, 1]]
-    h2 = px.imshow(z, text_auto=True, aspect="auto")
-    return h2
 
 # Donut chart
 def make_donut(input_response, input_text, input_color):
@@ -177,7 +171,6 @@ with col[1]:
     st.markdown('#### Feature Scoring')
     heatmap = make_heatmap(df_selected_category, 'subCategory', 'adobeScore', 'priority', selected_color_theme)
     st.altair_chart(heatmap, use_container_width=True)  
-    myh2 = make_h2(selected_color_theme)
-    st.altair_chart(myh2, use_container_width=True)
-
+    fig = px.imshow(hots, text_auto=True)
+    st.plotly_chart(fig, use_container_width=True)
     

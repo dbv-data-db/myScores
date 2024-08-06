@@ -176,7 +176,7 @@ with col[1]:
     data=[[1, 25, 30, 50, 1], [20, 1, 60, 80, 30], [30, 60, 1, 5, 20]]
     fig2 = px.imshow(data,
                 labels=dict(x="Vendor", y="Category", color="Productivity"),
-                x=['Data', 'Decisioning', 'Distribution', 'Content', 'Measurement', 'Experience'],
+                x=['Data', 'Decisioning', 'Distribution', 'Content', 'Measurement'],
                 y=['Adobe', 'Salesforce', 'Braze']
                )
     fig2.update_xaxes(side="top")

@@ -65,7 +65,12 @@ def make_pie(input_color_theme):
 
 # second heatmap
 def make_h2(input_color_theme):
-    h2 = px.imshow(scoredata, text_auto=True, aspect="auto")
+    z = [[.1, .3, .5, .7, .9],
+     [1, .8, .6, .4, .2],
+     [.2, 0, .5, .7, .9],
+     [.9, .8, .4, .2, 0],
+     [.3, .4, .5, .7, 1]]
+    h2 = px.imshow(z, text_auto=True, aspect="auto")
     return h2
 
 # Donut chart

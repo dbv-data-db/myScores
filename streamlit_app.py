@@ -63,6 +63,11 @@ def make_pie(input_color_theme):
     pie = px.pie(scoredata, values='priority', names='category', title='Feature Prioritization')
     return pie
 
+# second heatmap
+def make_h2(input_color_theme):
+h2 = px.imshow(scoredata, text_auto=True, aspect="auto")
+return h2
+
 # Donut chart
 def make_donut(input_response, input_text, input_color):
   if input_color == 'blue':
@@ -166,10 +171,8 @@ col = st.columns((.5, 6.5, 1), gap='medium')
 with col[1]:
     st.markdown('#### Feature Scoring')
     heatmap = make_heatmap(df_selected_category, 'subCategory', 'adobeScore', 'priority', selected_color_theme)
-    st.altair_chart(heatmap, use_container_width=True)
-    px.imshow([[1, 20, 30],
-                 [20, 1, 60],
-                 [30, 60, 1]])    
-    st.altair_chart(px, use_container_width=True)
+    st.altair_chart(heatmap, use_container_width=True)  
+    myh2 = make_h2(selected_color_theme)
+    st.altair_chart(myh2, use_container_width=True)
 
     

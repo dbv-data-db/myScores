@@ -167,7 +167,9 @@ with col[1]:
     st.markdown('#### Feature Scoring')
     heatmap = make_heatmap(df_selected_category, 'subCategory', 'adobeScore', 'priority', selected_color_theme)
     st.altair_chart(heatmap, use_container_width=True)
-    px.density_heatmap(scoredata, x="adobeScore", y="priority", nbinsx=20, nbinsy=20, color_continuous_scale="Viridis")
+    px.imshow([[1, 20, 30],
+                 [20, 1, 60],
+                 [30, 60, 1]])    
     st.altair_chart(px, use_container_width=True)
 
     

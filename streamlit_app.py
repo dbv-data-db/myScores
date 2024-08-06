@@ -65,7 +65,7 @@ def make_pie(input_color_theme):
 
 # second heatmap
 def make_h2(input_color_theme):
-h2 = px.imshow(scoredata, text_auto=True, aspect="auto")
+    h2 = px.imshow(scoredata, text_auto=True, aspect="auto")
 return h2
 
 # Donut chart

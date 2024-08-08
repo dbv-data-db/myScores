@@ -183,8 +183,7 @@ with col[1]:
     fig2.update_xaxes(side="top")
     st.plotly_chart(fig2, use_container_width=True)
     #sumAdobeScore, sumSalesforceScore, sumBrazeScore
-    df = pd.DataFrame(data=categorydata, index=row_labels)
-    st.write(df)
+    st.write(categorydata)
     st.write(categorydata['sumAdobeScore'])
     categorydata_reshaped = categorydata
     fig3 = px.imshow(categorydata_reshaped,

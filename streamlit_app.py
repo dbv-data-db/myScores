@@ -186,7 +186,8 @@ with col[1]:
     st.write(categorydata['sumSalesforceScore'])
     st.write(categorydata['sumAdobeScore'])
     scoreCard = categorydata['sumAdobeScore'], categorydata['sumSalesforceScore'],['sumBrazeScore']
-    st.write(scoreCard)
+    array = scoreCard.to_numpy()
+    st.write(array)
     st.write(data)
     fig3 = px.imshow(data,
                 labels=dict(x="Vendor", y="Category", color="Score"),

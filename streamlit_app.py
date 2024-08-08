@@ -170,7 +170,7 @@ with col[2]:
 col = st.columns((.5, 6.5, 1), gap='medium')
 
 with col[1]:
-    st.markdown('#### Feature Scoring')
+    st.markdown('#### (Weighted) Capability Scoring')
     heatmap = make_heatmap(scoredata, 'subCategory', 'adobeScore', 'priority', selected_color_theme)
     st.altair_chart(heatmap, use_container_width=True)  
     fig = px.imshow(hots, text_auto=True)
@@ -182,10 +182,20 @@ with col[1]:
     data=[[4.08, 3.91, 4.25, 2.38, 8.33, 3.23], [4.08, 3.91, 4.23, 2.38, 1.7, 2.04], [2.55, 3.57, 3.4, 1.53, 3.74, 2.21]]
     fig2 = px.imshow(data,
                 labels=dict(x="Vendor", y="Category", color="Score"),
-                x=['Data', 'Decisioning', 'Distribution', 'Content', 'Measurement','Experience'],
+                x=['Data', 'Decisioning', 'Distribution', 'Measurement', 'Content','Experience'],
                 y=['Adobe', 'Salesforce', 'Braze']
                )
     fig2.update_xaxes(side="top")
     st.plotly_chart(fig2, use_container_width=True)
+    st.markdown("### (Unweighted) Dimensional Scoring')
+     #hardcoding in the summary numbers for now
+    data=[[4, 4, 4, 5, 4, 3, 4, 5], [4, 3, 4, 5, 4, 4, 4, 5], [4, 3, 4, 4, 3, 4, 3, 3]]
+    fig3 = px.imshow(data,
+                labels=dict(x="Vendor", y="Dimension", color="Score"),
+                x=['Interoperability', 'Technical', 'Security', 'Scalability', 'Capability','Reliability', 'Usability','Maturity],
+                y=['Adobe', 'Salesforce', 'Braze']
+               )
+    fig3.update_xaxes(side="top")
+    st.plotly_chart(fig3, use_container_width=True)            
  
 

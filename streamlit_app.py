@@ -168,7 +168,7 @@ with col[2]:
 col = st.columns((.5, 6.5, 1), gap='medium')
 
 with col[1]:
-    st.mardown('#### Shared Prioritization Weighting')
+    st.markdown('#### Shared Prioritization Weighting')
     fig = px.pie(weightdata, values='weight', names='category', title=f'Feature Priotization', height=500, width=300)
     st.plotly_chart(fig, use_container_width=True)    
     st.markdown('#### (Weighted) Capability Scoring')

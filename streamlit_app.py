@@ -133,7 +133,7 @@ with col[0]:
     st.write('Feature Completeness')
     st.altair_chart(donut_chart_greater) 
     st.markdown('#### Adobe Average')
-    st.write(scoredata['adobeScore'].mean())    
+    st.write(round(scoredata['adobeScore'].mean()),2)    
 with col[1]:
     st.markdown('#### Salesforce')
     indexCount = 0
@@ -149,7 +149,7 @@ with col[1]:
     st.write('Feature Complete')
     st.altair_chart(donut_chart_greater)    
     st.markdown('#### Salesforce Average')
-    st.write(scoredata['salesforceScore'].mean())    
+    st.write(round(scoredata['salesforceScore'].mean()),2)    
 with col[2]:
     st.markdown('#### Braze')
     indexCount = 0
@@ -165,16 +165,12 @@ with col[2]:
     st.write('Feature Complete')
     st.altair_chart(donut_chart_greater)
     st.markdown('#### Braze Average')
-    st.write(scoredata['brazeScore'].mean())        
+    st.write(round(scoredata['brazeScore'].mean()),2)        
     
 col = st.columns((.5, 6.5, 1), gap='medium')
 
 with col[1]:
     st.markdown('#### (Weighted) Capability Scoring')
-    heatmap = make_heatmap(scoredata, 'subCategory', 'adobeScore', 'priority', selected_color_theme)
-    st.altair_chart(heatmap, use_container_width=True)  
-    fig = px.imshow(hots, text_auto=True)
-    st.plotly_chart(fig, use_container_width=True)
     #hardcoding in the summary numbers for now
     #adobe: 4.08, 3.91, 4.25, 2.38, 8.33, 3.23
     #sf: 4.08, 3.91, 4.23, 2.38, 1.7, 2.04
@@ -188,7 +184,7 @@ with col[1]:
     fig2.update_xaxes(side="top")
     st.plotly_chart(fig2, use_container_width=True)
     st.markdown('### (Unweighted) Dimensional Scoring')
-     #hardcoding in the summary numbers for now
+    #hardcoding in the summary numbers for now
     data=[[4, 4, 4, 5, 4, 3, 4, 5], [4, 3, 4, 5, 4, 4, 4, 5], [4, 3, 4, 4, 3, 4, 3, 3]]
     fig3 = px.imshow(data,
                 labels=dict(x="Vendor", y="Dimension", color="Score"),

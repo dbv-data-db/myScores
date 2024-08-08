@@ -185,7 +185,7 @@ with col[1]:
     #sumAdobeScore, sumSalesforceScore, sumBrazeScore
     df = pd.DataFrame(data=categorydata, index=row_labels)
     st.write(df)
-    st.write(categorydata['sumAdobeScore']
+    st.write(categorydata['sumAdobeScore'])
     categorydata_reshaped = categorydata
     fig3 = px.imshow(categorydata_reshaped,
                 labels=dict(x="Vendor", y="Category", color="Score"),

@@ -132,7 +132,7 @@ with col[0]:
     donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')
     st.write('Feature Completeness')
     st.altair_chart(donut_chart_greater) 
-    st.markdown('#### Adobe Average')
+    st.markdown('Average')
     st.write(round(scoredata['adobeScore'].mean()),2)    
 with col[1]:
     st.markdown('#### Salesforce')
@@ -148,7 +148,7 @@ with col[1]:
     donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')
     st.write('Feature Complete')
     st.altair_chart(donut_chart_greater)    
-    st.markdown('#### Salesforce Average')
+    st.markdown('Average')
     st.write(round(scoredata['salesforceScore'].mean()),2)    
 with col[2]:
     st.markdown('#### Braze')
@@ -164,7 +164,7 @@ with col[2]:
     donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')
     st.write('Feature Complete')
     st.altair_chart(donut_chart_greater)
-    st.markdown('#### Braze Average')
+    st.markdown('Average')
     st.write(round(scoredata['brazeScore'].mean()),2)        
     
 col = st.columns((.5, 6.5, 1), gap='medium')

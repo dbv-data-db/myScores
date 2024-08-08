@@ -187,7 +187,7 @@ with col[1]:
                )
     fig2.update_xaxes(side="top")
     st.plotly_chart(fig2, use_container_width=True)
-    st.markdown("### (Unweighted) Dimensional Scoring')
+    st.markdown('### (Unweighted) Dimensional Scoring')
      #hardcoding in the summary numbers for now
     data=[[4, 4, 4, 5, 4, 3, 4, 5], [4, 3, 4, 5, 4, 4, 4, 5], [4, 3, 4, 4, 3, 4, 3, 3]]
     fig3 = px.imshow(data,

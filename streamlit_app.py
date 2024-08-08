@@ -131,7 +131,7 @@ with col[0]:
     st.write('Feature Completeness')
     st.altair_chart(donut_chart_greater) 
     st.markdown('Average')
-    st.write(round(scoredata['adobeScore'].mean()),2)    
+    st.write(scoredata['adobeScore'].mean())    
 with col[1]:
     st.markdown('#### Salesforce')
     indexCount = 0
@@ -147,7 +147,7 @@ with col[1]:
     st.write('Feature Complete')
     st.altair_chart(donut_chart_greater)    
     st.markdown('Average')
-    st.write(round(scoredata['salesforceScore'].mean()),2)    
+    st.write(scoredata['salesforceScore'].mean())    
 with col[2]:
     st.markdown('#### Braze')
     indexCount = 0
@@ -163,7 +163,7 @@ with col[2]:
     st.write('Feature Complete')
     st.altair_chart(donut_chart_greater)
     st.markdown('Average')
-    st.write(round(scoredata['brazeScore'].mean()),2)        
+    st.write(scoredata['brazeScore'].mean())        
     
 col = st.columns((.5, 6.5, 1), gap='medium')
 

@@ -169,7 +169,7 @@ col = st.columns((.5, 6.5, 1), gap='medium')
 
 with col[1]:
     st.markdown('#### Feature Scoring')
-    heatmap = make_heatmap(df_selected_category, 'subCategory', 'adobeScore', 'priority', selected_color_theme)
+    heatmap = make_heatmap(scoredata, 'subCategory', 'adobeScore', 'priority', selected_color_theme)
     st.altair_chart(heatmap, use_container_width=True)  
     fig = px.imshow(hots, text_auto=True)
     st.plotly_chart(fig, use_container_width=True)

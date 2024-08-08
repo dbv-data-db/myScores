@@ -183,7 +183,7 @@ with col[1]:
     fig2.update_xaxes(side="top")
     st.plotly_chart(fig2, use_container_width=True)
     #sumAdobeScore, sumSalesforceScore, sumBrazeScore
-    st.write(categorydata['sumSalesforceScore')
+    st.write(categorydata['sumSalesforceScore'])
     st.write(categorydata['sumAdobeScore'])
     scoreCard = categorydata['sumAdobeScore'], categorydata['sumSalesforceScore'],['sumBrazeScore']
     st.write(scoreCard)

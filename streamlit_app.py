@@ -22,6 +22,7 @@ alt.themes.enable("dark")
 df_reshaped = pd.read_csv('data/scores.csv')
 scoredata = pd.read_csv('data/scores.csv')
 weightdata = pd.read_csv('data/weight.csv')
+categorydata = pd.read_csv('data/scorecard_categories.csv')
 hots = [[.1, .3, .5, .7, .9],
      [1, .8, .6, .4, .2],
      [.2, 0, .5, .7, .9],
@@ -181,4 +182,16 @@ with col[1]:
                )
     fig2.update_xaxes(side="top")
     st.plotly_chart(fig2, use_container_width=True)
+    #sumAdobeScore, sumSalesforceScore, sumBrazeScore
+    df = pd.DataFrame(data=categorydata, index=row_labels)
+    st.write(df)
+    st.write(categorydata['sumAdobeScore']
+    categorydata_reshaped = categorydata
+    fig3 = px.imshow(categorydata_reshaped,
+                labels=dict(x="Vendor", y="Category", color="Score"),
+                x=['Data', 'Decisioning', 'Distribution', 'Measurement', 'Content','Experience'],
+                y=['Adobe', 'Salesforce', 'Braze']
+               )
+    fig2.update_xaxes(side="top")
+    st.plotly_chart(fig2, use_container_width=True)    
 

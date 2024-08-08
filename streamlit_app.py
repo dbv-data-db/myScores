@@ -173,10 +173,10 @@ with col[1]:
     st.altair_chart(heatmap, use_container_width=True)  
     fig = px.imshow(hots, text_auto=True)
     st.plotly_chart(fig, use_container_width=True)
-    data=[[1, 25, 30, 50, 1], [20, 1, 60, 80, 30], [30, 60, 1, 5, 20]]
+    data=[[1, 25, 30, 50, 1, 5], [20, 1, 60, 80, 30, 4], [30, 60, 1, 5, 20, 10]]
     fig2 = px.imshow(data,
-                labels=dict(x="Vendor", y="Category", color="Productivity"),
-                x=['Data', 'Decisioning', 'Distribution', 'Content', 'Measurement'],
+                labels=dict(x="Vendor", y="Category", color="Score"),
+                x=['Data', 'Decisioning', 'Distribution', 'Content', 'Measurement','Experience'],
                 y=['Adobe', 'Salesforce', 'Braze']
                )
     fig2.update_xaxes(side="top")

@@ -115,8 +115,6 @@ def make_donut(input_response, input_text, input_color):
 #######################
 # Dashboard Main Panel
 st.title('Analysis of Multi-Channel Marketing Hub Capabilities')
-fig = px.pie(weightdata, values='weight', names='category', title=f'Feature Priotization', height=500, width=300)
-st.plotly_chart(fig, use_container_width=True)
 col = st.columns((3, 3, 2), gap='medium')
 with col[0]:
     st.markdown('#### Adobe')
@@ -170,6 +168,9 @@ with col[2]:
 col = st.columns((.5, 6.5, 1), gap='medium')
 
 with col[1]:
+    st.mardown('#### Shared Prioritization Weighting')
+    fig = px.pie(weightdata, values='weight', names='category', title=f'Feature Priotization', height=500, width=300)
+    st.plotly_chart(fig, use_container_width=True)    
     st.markdown('#### (Weighted) Capability Scoring')
     #hardcoding in the summary numbers for now
     #adobe: 4.08, 3.91, 4.25, 2.38, 8.33, 3.23

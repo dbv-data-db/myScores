@@ -149,7 +149,7 @@ with col[1]:
     st.write('Feature Complete')
     st.altair_chart(donut_chart_greater)    
     st.markdown('#### Salesforce Average')
-    st.write(df_selected_category['salesforceScore'].mean())    
+    st.write(scoredata['salesforceScore'].mean())    
 with col[2]:
     st.markdown('#### Braze')
     indexCount = 0

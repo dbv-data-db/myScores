@@ -1,34 +1,34 @@
-priority,category,subCategory,description,adobeScore,salesforceScore,brazeScore
-1,Data,Interoperability,,4,4,4
-1,Data,Transformations,,5,4,3
-1,Data,Encryption,,5,4,3
-1,Data,Data Governance,,5,4,2
-1,Data,Unified Profiles,,5,4,1
-1,Decisoning,Interoperability,,5,4,4
-1,Decisoning,Data Latency,,5,4,4
-1,Decisoning,Real-time Responsive Journeys,,5,4,5
-1,Decisoning,Customizable Scoring Models,,4,4,4
-1,Decisoning,Next Best Action,,4,4,4
-1,Distribution,Interoperability,,5,4,4
-1,Distribution,Omni-Channel,,5,4,4
-1,Distribution,Dynamic Content,,5,4,4
-1,Distribution,Campaign Management,,5,4,4
-1,Distribution,Experimentation with Automation,,4,4,5
-1,Distribution,Send Time Optimization,,1,4,1
-1,Measurement,Customer Analytics/Monitoring,,5,4,3
-1,Measurement,Channel Analytics/Monitoring,,5,4,3
-1,Measurement,Data Latency,,4,4,4
-1,Content,Interoperability,,5,4,4
-1,Content,Asset Component Library,,5,4,2
-1,Content,React Support,,3,4,1
-1,Content,Offer Experiences with Digital Assets Management,,5,4,3
-1,Content,Content Approval Workflow,,5,4,3
-1,Content,Omni-Channel Variants and Approvals,,5,4,4
-1,Content,Content Syndication (re-use),,5,4,2
-1,Content,Landing Site Personalization Control,,5,4,2
-1,Content,GenAI Content Creation,,4,4,4
-1,Content,GenAI LLM Extension,,2,4,3
-1,Marketer Experience,Interoperability,,5,4,4
-1,Marketer Experience,Campaign Management,,5,4,3
-1,Marketer Experience,Resource Management,,5,4,3
-1,Marketer Experience,Communication and Collaboration Tools,,4,4,3
+priority,category,subCategory,adobeScore,adobeWeightP,salesforceScore,salesforceWeightP,brazeScore,brazeWeightP
+17%,Data,Interoperability,4,0.68,4,0.68,4,0.68
+17%,Data,Transformations,5,0.85,5,0.85,5,0.85
+17%,Data,Encryption,5,0.85,5,0.85,1,0.17
+17%,Data,Data Governance,5,0.85,5,0.85,1,0.17
+17%,Data,Unified Profiles,5,0.85,5,0.85,4,0.68
+17%,Decisoning,Interoperability,5,0.85,4,0.68,4,0.68
+17%,Decisoning,Data Latency,5,0.85,4,0.68,4,0.68
+17%,Decisoning,Real-time Responsive Journeys,5,0.85,5,0.85,5,0.85
+17%,Decisoning,Customizable Scoring Models,4,0.68,5,0.85,4,0.68
+17%,Decisoning,Next Best Action,4,0.68,5,0.85,4,0.68
+17%,Distribution,Interoperability,5,0.85,5,0.85,4,0.68
+17%,Distribution,Omni-Channel,5,0.85,3,0.51,5,0.85
+17%,Distribution,Dynamic Content,5,0.85,3,0.51,5,0.85
+17%,Distribution,Campaign Management,5,0.85,4,0.68,4,0.68
+17%,Distribution,Experimentation with Automation,4,0.68,4,0.68,1,0.17
+17%,Distribution,Send Time Optimization,1,0.17,1,1,1,0.17
+17%,Measurement,Customer Analytics/Monitoring,5,0.85,5,0.85,3,0.51
+17%,Measurement,Channel Analytics/Monitoring,5,0.85,5,0.85,3,0.51
+17%,Measurement,Data Latency,4,0.68,4,0.68,3,0.51
+17%,Content,Interoperability,5,0.85,1,0.17,4,0.68
+17%,Content,Asset Component Library,5,0.85,1,0.17,4,0.68
+17%,Content,React Support,5,0.85,1,0.17,1,0.17
+17%,Content,Offer Experiences with Digital Assets Management,5,0.85,1,0.17,4,0.68
+17%,Content,Content Approval Workflow,5,0.85,1,0.17,1,0.17
+17%,Content,Omni-Channel Variants and Approvals,5,0.85,1,0.17,1,0.17
+17%,Content,Content Syndication (re-use),5,0.85,1,0.17,4,0.68
+17%,Content,Landing Site Personalization Control,5,0.85,1,0.17,1,0.17
+17%,Content,GenAI Content Creation,5,0.85,1,0.17,1,0.17
+17%,Content,GenAI LLM Extension,4,0.68,1,0.17,1,0.17
+17%,Marketer Experience,Interoperability,5,0.85,1,0.17,4,0.68
+17%,Marketer Experience,Campaign Management,5,0.85,4,0.68,3,0.51
+17%,Marketer Experience,Resource Management,5,0.85,4,0.68,3,0.51
+17%,Marketer Experience,Communication and Collaboration Tools,4,0.68,3,0.51,3,0.51

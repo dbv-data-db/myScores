@@ -5,6 +5,7 @@ import pandas as pd
 import altair as alt
 import plotly.express as px
 import math
+import numpy as np
 
 #######################
 # Page configuration
@@ -186,8 +187,10 @@ with col[1]:
     st.write(categorydata['sumSalesforceScore'])
     st.write(categorydata['sumAdobeScore'])
     scoreCard = categorydata['sumAdobeScore'], categorydata['sumSalesforceScore'],['sumBrazeScore']
-    array = scoreCard.to_numpy()
-    st.write(array)
+    #array = scoreCard.to_numpy()
+    df_int_str = pd.DataFrame({'A': [1, 2], 'B': ['abc', 'xyz']}, index=['X', 'Y'])
+    st.write(df_int_str.to_numpy())
+    st.write(scoreCard)
     st.write(data)
     fig3 = px.imshow(data,
                 labels=dict(x="Vendor", y="Category", color="Score"),

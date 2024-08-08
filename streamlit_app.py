@@ -175,7 +175,11 @@ with col[1]:
     st.altair_chart(heatmap, use_container_width=True)  
     fig = px.imshow(hots, text_auto=True)
     st.plotly_chart(fig, use_container_width=True)
-    data=[[1, 25, 30, 50, 1, 5], [20, 1, 60, 80, 30, 4], [30, 60, 1, 5, 20, 10]]
+    #hardcoding in the summary numbers for now
+    #adobe: 4.08, 3.91, 4.25, 2.38, 8.33, 3.23
+    #sf: 4.08, 3.91, 4.23, 2.38, 1.7, 2.04
+    #braze: 2.55, 3.57, 3.4, 1.53, 3.74, 2.21 
+    data=[[4.08, 3.91, 4.25, 2.38, 8.33, 3.23], [4.08, 3.91, 4.23, 2.38, 1.7, 2.04], [2.55, 3.57, 3.4, 1.53, 3.74, 2.21]]
     fig2 = px.imshow(data,
                 labels=dict(x="Vendor", y="Category", color="Score"),
                 x=['Data', 'Decisioning', 'Distribution', 'Content', 'Measurement','Experience'],
@@ -183,20 +187,5 @@ with col[1]:
                )
     fig2.update_xaxes(side="top")
     st.plotly_chart(fig2, use_container_width=True)
-    #sumAdobeScore, sumSalesforceScore, sumBrazeScore
-    st.write(categorydata['sumSalesforceScore'])
-    st.write(categorydata['sumAdobeScore'])
-    scoreCard = categorydata['sumAdobeScore'], categorydata['sumSalesforceScore'],['sumBrazeScore']
-    #array = scoreCard.to_numpy()
-    df_int_str = pd.DataFrame({'A': [1, 2], 'B': ['abc', 'xyz']}, index=['X', 'Y'])
-    st.write(df_int_str.to_numpy())
-    st.write(scoreCard)
-    st.write(data)
-    fig3 = px.imshow(data,
-                labels=dict(x="Vendor", y="Category", color="Score"),
-                x=['Data', 'Decisioning', 'Distribution', 'Measurement', 'Content','Experience'],
-                y=['Adobe', 'Salesforce', 'Braze']
-               )
-    fig2.update_xaxes(side="top")
-    st.plotly_chart(fig2, use_container_width=True)    
+ 
 

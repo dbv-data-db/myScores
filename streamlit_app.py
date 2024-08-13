@@ -150,20 +150,7 @@ with col[1]:
     st.write(scoredata['salesforceScore'].mean())    
 with col[2]:
     st.markdown('#### Braze')
-    indexCount = 0
-    for index, row in scoredata.iterrows():
-        if row['brazeScore']==4:
-            indexCount = indexCount + 1
-        if row['brazeScore']==5:
-            indexCount = indexCount + 1
-    feature_complete = math.trunc(indexCount/scoredata['brazeScore'].count()*100)
-    ease_implementation = 40
-    donut_chart_greater = make_donut(feature_complete, 'Feature Complete', 'blue')
-    donut_chart_less = make_donut(ease_implementation, 'Ease of Implementation', 'orange')
-    st.write('Feature Complete')
-    st.altair_chart(donut_chart_greater)
-    st.markdown('Average')
-    st.write(scoredata['brazeScore'].mean())        
+       
     
 col = st.columns((.5, 6.5, 1), gap='medium')
 
@@ -176,21 +163,21 @@ with col[1]:
     #adobe: 4.08, 3.91, 4.25, 2.38, 8.33, 3.23
     #sf: 4.08, 3.91, 4.23, 2.38, 1.7, 2.04
     #braze: 2.55, 3.57, 3.4, 1.53, 3.74, 2.21 
-    data=[[4.08, 3.91, 4.25, 2.38, 8.33, 3.23], [4.08, 3.91, 4.23, 2.38, 1.7, 2.04], [2.55, 3.57, 3.4, 1.53, 3.74, 2.21]]
+    data=[[4.08, 3.91, 4.25, 2.38, 8.33, 3.23], [4.08, 3.91, 4.23, 2.38, 1.7, 2.04]]
     fig2 = px.imshow(data,
                 labels=dict(x="Vendor", y="Category", color="Score"),
                 x=['Data', 'Decisioning', 'Distribution', 'Measurement', 'Content','Experience'],
-                y=['Adobe', 'Salesforce', 'Braze']
+                y=['Adobe', 'Salesforce']
                )
     fig2.update_xaxes(side="top")
     st.plotly_chart(fig2, use_container_width=True)
     st.markdown('### (Unweighted) Dimensional Scoring')
     #hardcoding in the summary numbers for now
-    data=[[4, 4, 4, 5, 4, 3, 4, 5], [4, 3, 4, 5, 4, 4, 4, 5], [4, 3, 4, 4, 3, 4, 3, 3]]
+    data=[[4, 4, 4, 5, 4, 3, 4, 5], [4, 3, 4, 5, 4, 4, 4, 5]]
     fig3 = px.imshow(data,
                 labels=dict(x="Vendor", y="Dimension", color="Score"),
                 x=['Interoperability', 'Technical', 'Security', 'Scalability', 'Capability','Reliability', 'Usability', 'Maturity'],
-                y=['Adobe', 'Salesforce', 'Braze']
+                y=['Adobe', 'Salesforce']
                )
     fig3.update_xaxes(side="top")
     st.plotly_chart(fig3, use_container_width=True)            

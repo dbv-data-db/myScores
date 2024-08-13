@@ -161,7 +161,7 @@ with col[1]:
     #adobe: 4.08, 3.91, 4.25, 2.38, 8.33, 3.23
     #sf: 4.08, 3.91, 4.23, 2.38, 1.7, 2.04
     #braze: 2.55, 3.57, 3.4, 1.53, 3.74, 2.21 
-    data=[[4.08, 3.91, 4.25, 2.38, 8.33, 3.23], [4.08, 3.91, 4.23, 2.38, 1.7, 2.04]]
+    data=[[4.32, 4.6, 4.05, 1,4, 12.25, 2.28], [4.32, 4.6, 3.45, 1.4, 7.25, 1.8]]
     fig2 = px.imshow(data,
                 labels=dict(x="Vendor", y="Category", color="Score"),
                 x=['Data', 'Decisioning', 'Distribution', 'Measurement', 'Content','Experience'],
@@ -171,7 +171,7 @@ with col[1]:
     st.plotly_chart(fig2, use_container_width=True)
     st.markdown('### (Unweighted) Dimensional Scoring')
     #hardcoding in the summary numbers for now
-    data=[[4, 4, 4, 5, 4, 3, 4, 5], [4, 3, 4, 5, 4, 4, 4, 5]]
+    data=[[4, 4, 4, 5, 5, 4, 5, 5], [3, 4, 4, 4, 5, 4, 5, 3]]
     fig3 = px.imshow(data,
                 labels=dict(x="Vendor", y="Dimension", color="Score"),
                 x=['Interoperability', 'Technical', 'Security', 'Scalability', 'Capability','Reliability', 'Usability', 'Maturity'],

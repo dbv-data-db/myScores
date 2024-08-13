@@ -115,7 +115,7 @@ def make_donut(input_response, input_text, input_color):
 #######################
 # Dashboard Main Panel
 st.title('Analysis of Multi-Channel Marketing Hub Capabilities')
-col = st.columns((3, 3, 2), gap='medium')
+col = st.columns((3, 3), gap='medium')
 with col[0]:
     st.markdown('#### Adobe')
     indexCount = 0
@@ -148,9 +148,7 @@ with col[1]:
     st.altair_chart(donut_chart_greater)    
     st.markdown('Average')
     st.write(scoredata['salesforceScore'].mean())    
-with col[2]:
-    st.markdown('#### Braze')
-       
+      
     
 col = st.columns((.5, 6.5, 1), gap='medium')
 

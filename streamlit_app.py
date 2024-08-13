@@ -115,7 +115,7 @@ def make_donut(input_response, input_text, input_color):
 #######################
 # Dashboard Main Panel
 st.title('Analysis of Multi-Channel Marketing Hub Capabilities')
-col = st.columns((3, 3), gap='medium')
+col = st.columns((3, 3, .5), gap='medium')
 with col[0]:
     st.markdown('#### Adobe')
     indexCount = 0

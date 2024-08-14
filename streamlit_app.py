@@ -176,7 +176,7 @@ with col[1]:
     st.plotly_chart(fig2b, use_container_width=True)    
     st.markdown('### (Unweighted) Dimensional Scoring')
     #hardcoding in the summary numbers for now
-    data=[[4, 4, 4, 5, 5, 4, 5, 5], [3, 4, 4, 4, 5, 4, 5, 3]]
+    data=[[4, 4, 4, 4, 5, 5, 4, 5], [3, 4, 4, 4, 5, 5, 4, 5]]
     fig3 = px.imshow(data,
                 labels=dict(x="Vendor", y="Dimension", color="Score"),
                 x=['Technical', 'Interoperability', 'Reliability', 'Security', 'Scalability','Usability', 'Maturity', 'Capability'],
@@ -186,7 +186,7 @@ with col[1]:
     st.plotly_chart(fig3, use_container_width=True)            
     st.markdown('### (Weighted) Dimensional Scoring')
     #hardcoding in the summary numbers for now
-    data=[[4, 4, 4, 5, 5, 4, 5, 5], [3, 4, 4, 4, 5, 4, 5, 3]]
+    data=[[.94, .8, .4, 1, .5, .5, .4, .5], [.85, .8, .4, .8, .5, .4, .5]]
     fig3b = px.imshow(data,
                 labels=dict(x="Vendor", y="Dimension", color="Score"),
                 x=['Technical', 'Interoperability', 'Reliability', 'Security', 'Scalability','Usability', 'Maturity', 'Capability'],

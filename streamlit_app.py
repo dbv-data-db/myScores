@@ -154,8 +154,8 @@ col = st.columns((.5, 6.5, 1), gap='medium')
 
 with col[1]:
     st.markdown('#### Shared Prioritization Weighting')
-    fig = px.pie(weightdata, values='weight', names='Vendor', title=f'Feature Priotization', height=500, width=300)
-    st.plotly_chart(fig, use_container_width=True)    
+    #fig = px.pie(weightdata, values='weight', names='Vendor', title=f'Feature Priotization', height=500, width=300)
+    #st.plotly_chart(fig, use_container_width=True)    
     st.markdown('#### (Unweighted) Capability Scoring Averages')
     data=[[4.8, 4.6, 4.67, 4.67, 4.75], [4.6, 4.6, 3.8, 4.67, 3.75]]
     fig2 = px.imshow(data,

@@ -1,34 +1,24 @@
-priority,category,subCategory,adobeScore,adobeWeightP,salesforceScore,salesforceWeightP
-18%,Data,Interoperability,4,0.72,4,0.72
-18%,Data,Transformations,5,0.9,5,0.9
-18%,Data,Encryption,5,0.9,5,0.9
-18%,Data,Data Governance,5,0.9,5,0.9
-18%,Data,Unified Profiles,5,0.9,5,0.9
-20%,Decisoning,Interoperability,5,1,4,0.8
-20%,Decisoning,Data Latency,5,1,4,0.8
-20%,Decisoning,Real-time Responsive Journeys,5,1,5,1
-20%,Decisoning,Customizable Scoring Models,4,0.8,5,1
-20%,Decisoning,Next Best Action,4,0.8,5,1
-15%,Distribution,Interoperability,5,0.75,5,0.75
-15%,Distribution,Omni-Channel,5,0.75,3,0.45
-15%,Distribution,Dynamic Content,5,0.75,3,0.45
-15%,Distribution,Campaign Management,5,0.75,4,0.6
-15%,Distribution,Experimentation with Automation,4,0.6,4,0.6
-15%,Distribution,Send Time Optimization,3,0.45,4,0.6
-10%,Measurement,Customer Analytics/Monitoring,5,0.5,5,0.5
-10%,Measurement,Channel Analytics/Monitoring,5,0.5,5,0.5
-10%,Measurement,Data Latency,4,0.4,4,0.4
-25%,Content,Interoperability,5,1.25,3,0.75
-25%,Content,Asset Component Library,5,1.25,3,0.75
-25%,Content,React Support,5,1.25,3,0.75
-25%,Content,Offer Experiences with Digital Assets Management,5,1.25,4,1
-25%,Content,Content Approval Workflow,5,1.25,2,0.5
-25%,Content,Omni-Channel Variants and Approvals,5,1.25,2,0.5
-25%,Content,Content Syndication (re-use),5,1.25,3,0.75
-25%,Content,Landing Site Personalization Control,5,1.25,3,0.75
-25%,Content,GenAI Content Creation,5,1.25,3,0.75
-25%,Content,GenAI LLM Extension,4,1,3,0.75
-12%,Marketer Experience,Interoperability,5,0.6,4,0.48
-12%,Marketer Experience,Campaign Management,5,0.6,4,0.48
-12%,Marketer Experience,Resource Management,5,0.6,4,0.48
-12%,Marketer Experience,Communication and Collaboration Tools,4,0.48,3,0.36
+priority,category,subCategory,adobeScore,adobeWeightP,salesforceScore,salesforceWeightP,,
+26%,Data,Interoperability,4,1.054285714,4,1.054285714,0,
+26%,Data,Transformations,5,1.317857143,5,1.317857143,0,
+26%,Data,Encryption,5,1.317857143,5,1.317857143,0,
+26%,Data,Data Governance,5,1.317857143,4,1.054285714,1,
+26%,Data,Unified Profiles,5,1.317857143,5,1.317857143,0,
+31%,Decisoning,Interoperability,5,1.5375,4,1.23,1,
+31%,Decisoning,Data Latency,5,1.5375,4,1.23,1,
+31%,Decisoning,Real-time Responsive Journeys,5,1.5375,5,1.5375,0,
+31%,Decisoning,Customizable Scoring Models,4,1.23,5,1.5375,-1,
+31%,Decisoning,Next Best Action,4,1.23,5,1.5375,-1,
+12%,Distribution,Interoperability,5,0.59516129,5,0.59516129,0,
+12%,Distribution,Omni-Channel,5,0.59516129,3,0.357096774,2,
+12%,Distribution,Dynamic Content,5,0.59516129,3,0.357096774,2,
+12%,Distribution,Campaign Management,5,0.59516129,4,0.476129032,1,
+12%,Distribution,Experimentation with Automation,4,0.476129032,4,0.476129032,0,
+12%,Distribution,Send Time Optimization Email,4,0.476129032,4,0.476129032,0,
+21%,Measurement,Customer Analytics/Monitoring,5,1.054285714,5,1.054285714,0,
+21%,Measurement,Channel Analytics/Monitoring,5,1.054285714,5,1.054285714,0,
+21%,Measurement,Data Latency,4,0.843428571,4,0.843428571,0,
+10%,Marketer Experience,Interoperability,5,0.520384615,4,0.416307692,1,
+10%,Marketer Experience,Campaign Management,5,0.520384615,4,0.416307692,1,
+10%,Marketer Experience,Resource Management,5,0.520384615,4,0.416307692,1,
+10%,Marketer Experience,Communication and Collaboration Tools,4,0.416307692,3,0.312230769,1,

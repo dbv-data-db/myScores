@@ -156,7 +156,7 @@ with col[1]:
     st.markdown('#### Shared Prioritization Weighting')
     fig = px.pie(weightdata, values='weight', names='category', title=f'Feature Priotization', height=500, width=300)
     st.plotly_chart(fig, use_container_width=True)    
-    st.markdown('#### (Weighted) Capability Scoring')
+    st.markdown('#### (Unweighted) Capability Scoring')
     data=[[4.32, 4.6, 4.05, 1.4, 12.25, 2.28], [4.32, 4.6, 3.45, 1.4, 7.25, 1.8]]
     fig2 = px.imshow(data,
                 labels=dict(x="Vendor", y="Category", color="Score"),
@@ -165,6 +165,15 @@ with col[1]:
                )
     fig2.update_xaxes(side="top")
     st.plotly_chart(fig2, use_container_width=True)
+    st.markdown('#### (Weighted) Capability Scoring')
+    data=[[4.32, 4.6, 4.05, 1.4, 12.25, 2.28], [4.32, 4.6, 3.45, 1.4, 7.25, 1.8]]
+    fig2b = px.imshow(data,
+                labels=dict(x="Vendor", y="Category", color="Score"),
+                x=['Data', 'Decisioning', 'Distribution', 'Measurement', 'Content','Experience'],
+                y=['Adobe', 'Salesforce']
+               )
+    fig2b.update_xaxes(side="top")
+    st.plotly_chart(fig2b, use_container_width=True)    
     st.markdown('### (Unweighted) Dimensional Scoring')
     #hardcoding in the summary numbers for now
     data=[[4, 4, 4, 5, 5, 4, 5, 5], [3, 4, 4, 4, 5, 4, 5, 3]]
@@ -175,5 +184,14 @@ with col[1]:
                )
     fig3.update_xaxes(side="top")
     st.plotly_chart(fig3, use_container_width=True)            
- 
+    st.markdown('### (Weighted) Dimensional Scoring')
+    #hardcoding in the summary numbers for now
+    data=[[4, 4, 4, 5, 5, 4, 5, 5], [3, 4, 4, 4, 5, 4, 5, 3]]
+    fig3b = px.imshow(data,
+                labels=dict(x="Vendor", y="Dimension", color="Score"),
+                x=['Technical', 'Interoperability', 'Reliability', 'Security', 'Scalability','Usability', 'Maturity', 'Capability'],
+                y=['Adobe', 'Salesforce']
+               )
+    fig3b.update_xaxes(side="top")
+    st.plotly_chart(fig3b, use_container_width=True)     
 

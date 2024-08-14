@@ -156,20 +156,20 @@ with col[1]:
     st.markdown('#### Shared Prioritization Weighting')
     fig = px.pie(weightdata, values='weight', names='category', title=f'Feature Priotization', height=500, width=300)
     st.plotly_chart(fig, use_container_width=True)    
-    st.markdown('#### (Unweighted) Capability Scoring')
-    data=[[4.32, 4.6, 4.05, 1.4, 12.25, 2.28], [4.32, 4.6, 3.45, 1.4, 7.25, 1.8]]
+    st.markdown('#### (Unweighted) Capability Scoring Averages')
+    data=[[4.8, 4.6, 4.67, 4.67, 4.75], [4., 64.6, 3.8, 4.67, 3.75]]
     fig2 = px.imshow(data,
                 labels=dict(x="Vendor", y="Category", color="Score"),
-                x=['Data', 'Decisioning', 'Distribution', 'Measurement', 'Content','Experience'],
+                x=['Data', 'Decisioning', 'Distribution', 'Measurement', 'Experience'],
                 y=['Adobe', 'Salesforce']
                )
     fig2.update_xaxes(side="top")
     st.plotly_chart(fig2, use_container_width=True)
-    st.markdown('#### (Weighted) Capability Scoring')
-    data=[[4.32, 4.6, 4.05, 1.4, 12.25, 2.28], [4.32, 4.6, 3.45, 1.4, 7.25, 1.8]]
+    st.markdown('#### (Weighted) Capability Scoring Averages')
+    data=[[1.27, 1.4, .55, .98, .49], [1.21, 1.41, .45, .98, .39]]
     fig2b = px.imshow(data,
                 labels=dict(x="Vendor", y="Category", color="Score"),
-                x=['Data', 'Decisioning', 'Distribution', 'Measurement', 'Content','Experience'],
+                x=['Data', 'Decisioning', 'Distribution', 'Measurement', 'Experience'],
                 y=['Adobe', 'Salesforce']
                )
     fig2b.update_xaxes(side="top")
